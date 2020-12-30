@@ -34,7 +34,7 @@ app.get("/about", (req, res) => {
     .on("data", (chunk) => {
       const objdata = JSON.parse(chunk);
       const arrData = [objdata];
-      console.log(`city name is ${arrData[0].name} and temp is ${arrData[0].main.temp}`);
+      console.log(`city name is ${arrData[0].name} and temp is ${arrData[0].main.temp} <br> <h1><a href="/ ">home</a></h1>`);
       
       res.write(`${arrData[0].name} : ${arrData[0].main.temp} deg `);
     })
