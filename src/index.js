@@ -5,7 +5,7 @@ const express = require("express");
 const app = express();
 const hbs = require("hbs");
 const requests = require("requests");
-const port = 8000;
+const port = process.env.PORT || 8000;    // for heroku port
 
 const staticPath = path.join(__dirname, "../public");
 const templatesPath = path.join(__dirname, "../templates/views");
